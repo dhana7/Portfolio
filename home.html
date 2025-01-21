@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dhana Portfolio :)</title>
+    <title>Dhana Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-
+    <script defer src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
+    <!-- Navigation -->
     <header>
         <nav>
             <ul>
@@ -18,27 +19,193 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <h1>Welcome to My Portfolio!</h1>
     </header>
-    <main>
-        <section id="home">
-            <h2>About Me</h2>
-            <p>Write a brief introduction about yourself here.</p>
-        </section>
-        <section id="work">
-            <h2>Work</h2>
-            <p>Details about your work experience or portfolio projects.</p>
-        </section>
-        <section id="travel">
-            <h2>Travel</h2>
-            <p>Share your travel experiences or stories.</p>
-        </section>
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Provide your email or contact details here.</p>
-        </section>
-    </main>
+
+    <!-- Home Section -->
+    <section id="home">
+        <h1>Welcome to My Portfolio!</h1>
+        <div class="profile-picture">
+            <img src="profile.jpg" alt="Dhana's Profile Picture">
+        </div>
+        <div class="about">
+            <p>Hi! 👋 I'm Dhanalakshmi Sangaraju, a passionate developer with 2+ years of industry experience, specializing in crafting efficient and user-friendly solutions. 💻✨ I'm a girl from Bangalore, India 🇮🇳 who decided to follow my dreams and come to the USA 🇺🇸 to pursue my master’s degree. 🎓 With a strong background in development and a knack for improving functionalities, I enjoy bringing ideas to life through code. Currently, I am focused on building intuitive systems. 🚀🔍</p>
+            <p>Beyond my professional journey, I am an avid traveler. 🌍✈️ I’ve explored the breathtaking landscapes of Canada 🍁 and ventured across 12 states in the USA, experiencing the diversity of cultures, cuisines, and adventures. 🌎🗺️ Traveling inspires me to stay curious, adaptable, and creative—qualities that I bring into my work. 🎨💡</p>
+        </div>
+    </section>
+
+    <section id="work">
+        <h2>🚀 Work Experience</h2>
+        <!-- Work Experience 1 -->
+        <div class="card">
+            <h3>💻 Full Stack Engineer Analyst</h3>
+            <p><strong>Accenture, Bangalore, India</strong> (Nov 2020 – Nov 2022)</p>
+            <ul>
+                <li>📊 Developed a planner dashboard reducing planning time from hours to minutes.</li>
+                <li>🤖 Automated ML engine using Azure AutoML, enhancing model accuracy.</li>
+                <li>📦 Integrated SKU rationalization logic to automate stock management.</li>
+                <li>📈 Built PowerBI dashboards for industry-standard graphs.</li>
+            </ul>
+        </div>
+    
+        <!-- Work Experience 2 -->
+        <div class="card">
+            <h3>📘 CDM Grader/Teaching Assistant</h3>
+            <p><strong>DePaul University</strong> (Sept 2024 – Present)</p>
+        </div>
+    
+        <!-- Work Experience 3 -->
+        <div class="card">
+            <h3>🖥️ Junior Developer</h3>
+            <p><strong>Pixquid, Chicago, United States</strong> (Jan 2025 – Present)</p>
+        </div>
+    
+        <h2>✨ Projects</h2>
+        <!-- Project 1 -->
+        <div class="card">
+            <h4>🌟 Enlive – AI-Powered Advertising Tool</h4>
+            <ul>
+                <li>🤝 Developed an open-source tool to help SMEs create advertisements using AI.</li>
+                <li>⚡ Collaborated during OraHacks Hackathon to design and implement functionalities.</li>
+            </ul>
+        </div>
+    
+        <!-- Project 2 -->
+        <div class="card">
+            <h4>🛍️ ShopEase Platform</h4>
+            <ul>
+                <li>🔐 Built a full-stack web application with .NET and React featuring authentication.</li>
+                <li>☁️ Deployed on Google Cloud Platform using containerized infrastructure.</li>
+            </ul>
+        </div>
+    
+        <h2>🛠️ Technical Skills</h2>
+        <div class="skills-container">
+            <canvas id="skillsChart" width="400" height="200"></canvas>
+        </div>
+    </section>
+    
+    <section id="travel">
+        <h2>Travel</h2>
+        <div class="travel-gallery">
+            <div class="travel-card">
+                <img src="Travel/31FA1F06-258F-4D55-BC19-7DA8A8925356.jpeg" alt="Climbing Adventure">
+                <p>🌿 Climbing through misty trails with friends – a true jungle adventure! 🧗‍♀️</p>
+            </div>
+            <!-- Second Image -->
+            <div class="travel-card">
+                <img src="Travel/43F0EB81-BCAE-419B-8957-943300040C47.JPG" alt="Canyon Exploration">
+                <p>🍂 Exploring canyons and waterfalls surrounded by autumn hues. 🌊</p>
+            </div>
+            <!-- Third Image -->
+            <div class="travel-card">
+                <img src="Travel/41B8D98D-A53B-4D9F-A2D1-E785147F8BC2.jpeg" alt="The Cloud Gate">
+                <p>✨ Visiting the iconic Cloud Gate in a dreamy snowy night. ❄️</p>
+            </div>
+            <!-- Fourth Image -->
+            <div class="travel-card">
+                <img src="Travel/181A2504-444B-4E86-947A-8769E454DFF0.JPG" alt="Evening at the Bridge">
+                <p>🌌 Serene evening on a wooden bridge with breathtaking views. 🌲</p>
+            </div>
+            <!-- Fifth Image -->
+            <div class="travel-card">
+                <img src="Travel/231C9B8F-BB6F-4B29-B82D-FD5B3D6EA852.heic" alt="Cityscape at Night">
+                <p>🏙️ Stunning city lights reflecting off the river – pure magic! 🌉</p>
+            </div>
+            <!-- Sixth Image -->
+            <div class="travel-card">
+                <img src="Travel/25BD6C81-82D3-49C5-BC51-4D59A89CF028.heic" alt="Hiking Adventure">
+                <p>⛰️ An exhilarating hike through rocky terrains and lush greens! 🚶‍♀️</p>
+            </div>
+            <!-- Seventh Image -->
+            <div class="travel-card">
+                <img src="Travel/7F3E7588-B953-41B8-9830-D99898F649B8.heic" alt="Misty Forest">
+                <p>🌫️ Walking through a misty forest – nature at its finest. 🌳</p>
+            </div>
+            <!-- Eighth Image -->
+            <div class="travel-card">
+                <img src="Travel/4CF93C24-2DDF-4EE4-8DED-85C8489F070C.heic" alt="Golden Sunset">
+                <p>🌅 Golden sunsets and tranquil vibes by the lakeside. 💛</p>
+            </div>
+            <!-- Ninth Image -->
+            <div class="travel-card">
+                <img src="Travel/9E082A3D-38D2-4D9A-BB77-2F3F8A0F8555.heic" alt="Riverside Serenity">
+                <p>🌊 Riverside serenity – where time stands still. 💧</p>
+            </div>
+            <!-- Tenth Image -->
+            <div class="travel-card">
+                <img src="Travel/3A376243-322A-4E7E-A63D-85CE42F64F83.heic" alt="Hidden Trails">
+                <p>🚶‍♀️ Following hidden trails deep into the wilderness. 🌲✨</p>
+            </div>
+            <!-- Photo 1 -->
+            <div class="travel-card">
+                <img src="Travel/31FA1F06-258F-4D55-BC19-7DA8A8925356.jpeg" alt="Climbing Adventure">
+                <p>🌿 Climbing through misty trails with friends – a true jungle adventure! 🧗‍♀️</p>
+            </div>
+            <!-- Photo 2 -->
+            <div class="travel-card">
+                <img src="Travel/43F0EB81-BCAE-419B-8957-943300040C47.JPG" alt="Canyon Exploration">
+                <p>🍂 Exploring canyons and waterfalls surrounded by autumn hues. 🌊</p>
+            </div>
+            <!-- Photo 3 -->
+            <div class="travel-card">
+                <img src="Travel/41B8D98D-A53B-4D9F-A2D1-E785147F8BC2.jpeg" alt="The Cloud Gate">
+                <p>✨ Visiting the iconic Cloud Gate in a dreamy snowy night. ❄️</p>
+            </div>
+            <!-- Photo 4 -->
+            <div class="travel-card">
+                <img src="Travel/181A2504-444B-4E86-947A-8769E454DFF0.JPG" alt="Evening at the Bridge">
+                <p>🌌 Serene evening on a wooden bridge with breathtaking views. 🌲</p>
+            </div>
+            <!-- Photo 5 -->
+            <div class="travel-card">
+                <img src="Travel/83952CB1-52EF-4B5B-B97B-990EDB4D38C2.heic" alt="Kayaking Adventure">
+                <p>🚣‍♀️ Kayaking on a peaceful river surrounded by nature. 🌿</p>
+            </div>
+            <!-- Photo 6 -->
+            <div class="travel-card">
+                <img src="Travel/98651BEB-1D2C-4BC8-B949-269B265FAD20.heic" alt="Wedding Bliss">
+                <p>💐 Celebrating love and friendships at a beautiful wedding. 💕</p>
+            </div>
+            <!-- Photo 7 -->
+            <div class="travel-card">
+                <img src="Travel/B1FF2BE0-12EA-4265-8A26-D86B6EE5C89C.heic" alt="Traditional Vibes">
+                <p>🌸 Dressing up in traditional attire for a cultural celebration. 🎉</p>
+            </div>
+            <!-- Photo 8 -->
+            <div class="travel-card">
+                <img src="Travel/B841F0BD-49F1-461E-B0B3-642BFD11D0DC.heic" alt="Family Hike">
+                <p>👨‍👩‍👧‍👦 Enjoying a refreshing hike with family in the hills. 🌄</p>
+            </div>
+            <!-- Photo 9 -->
+            <div class="travel-card">
+                <img src="Travel/IMG_3991.heic" alt="Bridge Walk">
+                <p>🌉 Walking through a scenic wooden bridge amidst greenery. 🌲</p>
+            </div>
+            <!-- Photo 10 -->
+            <div class="travel-card">
+                <img src="Travel/IMG20210911134249.jpeg" alt="Golden Hour">
+                <p>🌅 Capturing the golden hour while exploring the countryside. 🌄</p>
+            </div>
+            <!-- Video -->
+            <div class="travel-card video-card">
+                <video controls>
+                    <source src="Travel/B5B88FEA-3DDB-49F2-800B-3347D16F6628.mov" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p>🎥 A quick video capturing vibrant city life. 🌆</p>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <div class="contact-container">
+            <p>📧 <strong>Email:</strong> <a href="mailto:sdhanala@depaul.edu">sdhanala@depaul.edu</a></p>
+            <p>💼 <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/dhanalakshmi99" target="_blank">LinkedIn Profile</a></p>
+        </div>
+    </section>
+    
 </body>
-
-
 </html>
